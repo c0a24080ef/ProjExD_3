@@ -7,8 +7,7 @@ import pygame as pg
 
 WIDTH = 1100  # ゲームウィンドウの幅
 HEIGHT = 650  # ゲームウィンドウの高さ
-NUM_OF_BOMBS = 5
-SCORE = 0
+NUM_OF_BOMBS = 5  #爆弾の数
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -195,7 +194,7 @@ def main():
                     beam = None
                     bombs[i] = None
                     bird.change_img(6, screen)
-                    score.score += 1
+                    score.score += 1  #爆弾を落とした数
                     
         bombs = [bomb for bomb in bombs if bomb is not None]
         score.update(screen)
